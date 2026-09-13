@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-home-theme="black">
 <head>
     <meta charset="utf-8">
     <title>My Share | Pan Feng</title>
@@ -7,51 +7,96 @@
     <link rel="alternate icon" href="./static/img/favicon.ico" sizes="any">
     <meta name="description" content="A personal collection of videos, images, and music shared by Pan Feng.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./static/css/root.css">
-    <link rel="stylesheet" href="./static/css/style.css">
+    <meta name="theme-color" content="#080808">
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('homeTheme') === 'white') {
+                    document.documentElement.dataset.homeTheme = 'white';
+                    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#edf0ee');
+                }
+            } catch (error) {
+                // Keep the black theme when browser storage is unavailable.
+            }
+        }());
+    </script>
+    <link rel="stylesheet" href="./static/css/home-proof.css">
     <link rel="stylesheet" href="./static/css/share.css">
 </head>
 <body class="share-page">
+    <a class="skip-link" href="#share-content">Skip to collection</a>
+    <div class="page-scan" aria-hidden="true"></div>
+
     <div class="share-shell">
         <header class="share-header">
-            <a href="./index.html" class="back-button">
+            <a href="./index.html" class="back-button" aria-label="Back to the homepage">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M15 5 8 12l7 7M8 12h11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 5 8 12l7 7M8 12h11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"/>
                 </svg>
-                Back to Home
+                <span>Back to Home</span>
             </a>
 
-            <div class="theme-row">
-                <span class="theme-icon" aria-hidden="true">☀</span>
-                <label class="theme-control" for="myonoffswitch">
-                    <span class="theme-label">Appearance</span>
-                    <span class="onoffswitch">
-                        <input type="checkbox" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                        <span class="onoffswitch-track" aria-hidden="true">
-                            <span class="onoffswitch-switch"></span>
-                        </span>
-                    </span>
-                </label>
-                <span class="theme-icon" aria-hidden="true">☾</span>
+            <p class="share-nav-focus">Media archive / PF-04</p>
+
+            <div class="share-controls">
+                <p class="proof-status"><span aria-hidden="true"></span>Archive ready</p>
+                <div class="home-theme-switch" role="group" aria-label="Color theme">
+                    <button type="button" data-home-theme-option="black" aria-pressed="true">Black</button>
+                    <button type="button" data-home-theme-option="white" aria-pressed="false">White</button>
+                </div>
             </div>
         </header>
 
-        <section class="share-hero">
-            <span class="share-eyebrow">Personal Collection</span>
-            <h1>My <span>Share</span></h1>
-            <p>Videos, anime, and music.</p>
+        <section class="share-hero" aria-labelledby="share-title">
+            <div class="share-hero-copy">
+                <span class="share-eyebrow"><i aria-hidden="true"></i>Personal collection</span>
+                <h1 id="share-title">My <span>Share</span></h1>
+                <p>Videos, anime, and music.</p>
+
+                <div class="share-register" aria-label="Collection categories">
+                    <span><b>01</b> Motion records</span>
+                    <span><b>02</b> Image archive</span>
+                    <span><b>03</b> Audio logs</span>
+                </div>
+            </div>
+
+            <aside class="archive-model" aria-label="Archive model notation">
+                <div class="model-heading">
+                    <span>Archive model</span>
+                    <b>ACTIVE</b>
+                </div>
+                <code>𝓜 := {m₁, …, mₙ}, T := {video, image, audio}</code>
+                <code>view(t) := {m ∈ 𝓜 | type(m) = t}, t ∈ T</code>
+                <div class="model-route" aria-hidden="true">
+                    <span>VIDEO</span><i></i><span>IMAGE</span><i></i><span>AUDIO</span>
+                </div>
+                <p>CURATED MEDIA / LOCAL INDEX</p>
+            </aside>
         </section>
 
-        <main class="share-content">
+        <div class="share-ticker" aria-hidden="true">
+            <div>
+                <span>𝓜 := {m<sub>1</sub>, …, m<sub>n</sub>}</span>
+                <span>type(m<sub>i</sub>) ∈ T</span>
+                <span>view(t) := {m ∈ 𝓜 | type(m) = t}</span>
+                <span>𝓜 := {m<sub>1</sub>, …, m<sub>n</sub>}</span>
+                <span>type(m<sub>i</sub>) ∈ T</span>
+                <span>view(t) := {m ∈ 𝓜 | type(m) = t}</span>
+            </div>
+        </div>
+
+        <main class="share-content" id="share-content">
             <section class="share-section" aria-labelledby="videos-title">
                 <header class="section-heading">
                     <span class="section-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="m9 8 7 4-7 4V8Z" fill="currentColor"/><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="m9 8 7 4-7 4V8Z" fill="currentColor"/><rect x="3" y="4" width="18" height="16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
                     </span>
                     <div>
+                        <span class="section-kicker">Motion records</span>
                         <h2 id="videos-title">Video Sharing</h2>
                         <p>Favorite clips.</p>
                     </div>
+                    <b class="section-number">01</b>
                 </header>
                 <div class="video-list"></div>
             </section>
@@ -59,12 +104,14 @@
             <section class="share-section" aria-labelledby="images-title">
                 <header class="section-heading">
                     <span class="section-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m5 17 5-5 3 3 2-2 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16.5" cy="8.5" r="1.5" fill="currentColor"/></svg>
+                        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m5 17 5-5 3 3 2-2 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/><circle cx="16.5" cy="8.5" r="1.5" fill="currentColor"/></svg>
                     </span>
                     <div>
+                        <span class="section-kicker">Image archive</span>
                         <h2 id="images-title">Anime Gallery</h2>
                         <p>Favorite scenes.</p>
                     </div>
+                    <b class="section-number">02</b>
                 </header>
                 <div class="album" tabindex="0" aria-label="Photo album"></div>
             </section>
@@ -72,32 +119,35 @@
             <section class="share-section" aria-labelledby="music-title">
                 <header class="section-heading">
                     <span class="section-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M9 17V6l10-2v11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M9 17V6l10-2v11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
                     </span>
                     <div>
+                        <span class="section-kicker">Audio logs</span>
                         <h2 id="music-title">Music Sharing</h2>
                         <p>Favorite songs.</p>
                     </div>
+                    <b class="section-number">03</b>
                 </header>
                 <div class="music-player"></div>
             </section>
         </main>
+
+        <footer class="share-footer">
+            <div>
+                <strong>Pan Feng © 2026</strong>
+                <span>Personal media archive.</span>
+            </div>
+            <div>
+                <a href="./index.html">Back to academic homepage</a>
+                <span>Interface / PF-04</span>
+            </div>
+        </footer>
     </div>
 
     <dialog class="image-dialog" aria-label="Image preview">
         <button class="dialog-close" type="button" aria-label="Close image preview">×</button>
         <img src="" alt="">
     </dialog>
-
-    <footer>
-        🌸 Pan Feng © 2026 |
-        <a href="https://github.com/ZYYO666/homepage" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9 23.5 23.2 38.1 55.4 38.1 91v112.5c0.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"/>
-            </svg>
-            Source by ZYYO666 🌸
-        </a>
-    </footer>
 
     <script src="./static/js/script.js" defer></script>
     <script src="./static/js/share-data.js" defer></script>

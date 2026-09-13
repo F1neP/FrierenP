@@ -1,139 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" data-home-theme="black">
 <head>
-	<meta charset="utf-8">
-	<title>Pan Feng's Homepage</title>
-	<link rel="icon" href="./static/img/favicon.svg" type="image/svg+xml">
-	<link rel="alternate icon" href="./static/img/favicon.ico" sizes="any">
-	<meta name="description" content="Ph.D. Student at Southeast University, School of Cyber Science and Engineering.">
-	<meta name="keywords" content="Pan Feng, Southeast University, Cyber Science, Ph.D. Student">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./static/css/root.css">
-	<link rel="stylesheet" href="./static/css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pan Feng is a Ph.D. student at Southeast University researching security protocols, formal security analysis, and privacy-preserving systems.">
+    <meta name="keywords" content="Pan Feng, Southeast University, cybersecurity, security protocols, cryptography, privacy-preserving systems">
+    <meta name="theme-color" content="#080808">
+    <title>Pan Feng | Cybersecurity Researcher</title>
+    <link rel="icon" href="./static/img/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="./static/img/favicon.ico" sizes="any">
+    <script>
+        try {
+            if (localStorage.getItem('homeTheme') === 'white') {
+                document.documentElement.dataset.homeTheme = 'white';
+            }
+        } catch (error) {
+            // The black theme remains the default when storage is unavailable.
+        }
+    </script>
+    <link rel="stylesheet" href="./static/css/home-proof.css">
 </head>
+<body class="proof-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<body>
+    <div class="page-scan" aria-hidden="true"></div>
 
-	<div class="zyyo-main">
-		<aside class="zyyo-left">
-			<div class="logo" role="img" aria-label="Portrait of Pan Feng"></div>
-			<div class="left-div left-des">
-				<div class="left-des-item"><svg t="1705773709627" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1478"><path d="M512 249.976471c-99.388235 0-180.705882 81.317647-180.705882 180.705882s81.317647 180.705882 180.705882 180.705882 180.705882-81.317647 180.705882-180.705882-81.317647-180.705882-180.705882-180.705882z m0 301.17647c-66.258824 0-120.470588-54.211765-120.470588-120.470588s54.211765-120.470588 120.470588-120.470588 120.470588 54.211765 120.470588 120.470588-54.211765 120.470588-120.470588 120.470588z" p-id="1479"></path><path d="M512 39.152941c-216.847059 0-391.529412 174.682353-391.529412 391.529412 0 349.364706 391.529412 572.235294 391.529412 572.235294s391.529412-222.870588 391.529412-572.235294c0-216.847059-174.682353-391.529412-391.529412-391.529412z m0 891.482353C424.658824 873.411765 180.705882 686.682353 180.705882 430.682353c0-183.717647 147.576471-331.294118 331.294118-331.294118s331.294118 147.576471 331.294118 331.294118c0 256-243.952941 442.729412-331.294118 499.952941z" p-id="1480"></path></svg>Nanjing, China
-				</div>
-				<div class="left-des-item"><svg t="1705773906032" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2474"><path d="M729.6 234.666667H294.4V157.866667a51.2 51.2 0 0 1 51.2-51.2h332.8a51.2 51.2 0 0 1 51.2 51.2v76.8z m179.2 51.2a51.2 51.2 0 0 1 51.2 51.2v512a51.2 51.2 0 0 1-51.2 51.2H115.2a51.2 51.2 0 0 1-51.2-51.2v-512a51.2 51.2 0 0 1 51.2-51.2h793.557333z m-768 172.032c0 16.384 13.312 29.696 29.696 29.696h683.008a29.696 29.696 0 1 0 0-59.392H170.410667a29.696 29.696 0 0 0-29.696 29.696z m252.416 118.784c0 16.384 13.312 29.696 29.696 29.696h178.176a29.696 29.696 0 1 0 0-59.392H422.912a29.738667 29.738667 0 0 0-29.696 29.696z" p-id="2475"></path></svg>Southeast University
-				</div>
-				<a class="left-des-item" href="mailto:fp_1022@seu.edu.cn">
-					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-					<span>fp_1022@seu.edu.cn</span>
-				</a>
-			</div>
+    <div class="proof-shell">
+        <header class="proof-nav">
+            <a class="proof-brand" href="./index.html" aria-label="Pan Feng home">
+                <b>PF</b>
+                <span>Proof Engine</span>
+            </a>
+            <p class="proof-nav-focus">Security protocols · Formal analysis · Privacy-preserving systems</p>
+            <div class="proof-controls">
+                <p class="proof-status"><span aria-hidden="true"></span>Public research profile</p>
+                <div class="home-theme-switch" role="group" aria-label="Homepage color theme">
+                    <button type="button" data-home-theme-option="black" aria-pressed="true">Black</button>
+                    <button type="button" data-home-theme-option="white" aria-pressed="false">White</button>
+                </div>
+            </div>
+        </header>
 
-			<section class="left-div left-time" aria-label="Academic milestones">
-				<ul class="timeline">
-					<!-- Add future milestones by copying one timeline-item block. -->
-					<li class="timeline-item">
-						<span class="timeline-dot" aria-hidden="true"></span>
-						<span class="timeline-title">CSC ✨</span>
-						<time datetime="2026-05-28">2026.05.28</time>
-					</li>
-					<li class="timeline-item">
-						<span class="timeline-dot" aria-hidden="true"></span>
-						<span class="timeline-title">Ph.D. Enrollment ✨</span>
-						<time datetime="2024-09">2024.09</time>
-					</li>
-				</ul>
-			</section>
-		</aside>
-		<div class="zyyo-right">
-			<header class="home-header">
-				<div class="theme-row">
-					<span class="theme-icon" aria-hidden="true">☀</span>
-					<label class="theme-control" for="myonoffswitch">
-						<span class="theme-label">Appearance</span>
-						<span class="onoffswitch">
-							<input type="checkbox" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-							<span class="onoffswitch-track" aria-hidden="true">
-								<span class="onoffswitch-switch"></span>
-							</span>
-						</span>
-					</label>
-					<span class="theme-icon" aria-hidden="true">☾</span>
-				</div>
+        <main id="main-content">
+            <section class="proof-hero" aria-labelledby="page-title">
+                <div class="proof-main">
+                    <p class="proof-kicker">Pan Feng · Ph.D. Student · Southeast University</p>
+                    <h1 class="proof-title" id="page-title">Pan <span>Feng</span></h1>
 
-				<div class="index-logo" role="img" aria-label="Portrait of Pan Feng"></div>
-				<div class="welcome">
-					Hello~ I'm <span class="gradientText">Pan Feng</span>
-				</div>
-				<div class="description">🎓 <span class="purpleText">Ph.D. Student</span>
-				</div>
-				<div class="description">📝 Worldly <span class="purpleText textBackground">success</span>  is the ticket to <span class="purpleText textBackground"> freedom.</span> </div>
-			</header>
+                    <div class="proof-intro">
+                        <h2>Research statement</h2>
+                        <p>I study security protocols for adversarial environments, with an emphasis on explicit threat models, formal security guarantees, and deployable privacy-preserving systems.</p>
+                    </div>
 
-			<main>
-				<div class="title">
-					<svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-						<path d="m12 3 1.4 4.2L18 9l-4.6 1.8L12 15l-1.4-4.2L6 9l4.6-1.8L12 3Zm6.5 11 .8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2ZM5 14l1 2.8L9 18l-3 1.2L5 22l-1-2.8L1 18l3-1.2L5 14Z"/>
-					</svg>
-					Explore
-				</div>
-				<div class="projectList">
-					<a class="projectItem" target="_blank" rel="noopener noreferrer" href="https://scholar.fp1022.dpdns.org/">
-						<div class="projectItemLeft">
-							<h1>Academic HomePage</h1>
-							<p>Research Profile &amp; Publications</p>
-						</div>
-						<div class="projectItemRight">
-							<img src="./static/img/i3.png" alt="">
-						</div>
-					</a>
-					<a class="projectItem" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?hl=en&user=NQzVlS8AAAAJ">
-						<div class="projectItemLeft">
-							<h1>Google Scholar</h1>
-							<p>Publications &amp; Citations</p>
-						</div>
-						<div class="projectItemRight">
-							<img src="./static/img/i1.png" alt="">
-						</div>
-					</a>
-					<a class="projectItem" target="_blank" rel="noopener noreferrer" href="https://blog.fp1022.dpdns.org/">
-						<div class="projectItemLeft">
-							<h1>My Study Notes</h1>
-							<p>Learning Notes &amp; Reflections</p>
-						</div>
-						<div class="projectItemRight">
-							<svg class="notes-icon" viewBox="0 0 48 48" aria-hidden="true">
-								<path d="M12 7h19l7 7v27H12z" fill="#fff4b8" stroke="#4b4b42" stroke-width="2.5" stroke-linejoin="round"/>
-								<path d="M31 7v8h7" fill="none" stroke="#4b4b42" stroke-width="2.5" stroke-linejoin="round"/>
-								<path d="M18 22h14M18 28h14M18 34h9" fill="none" stroke="#6759e8" stroke-width="2.5" stroke-linecap="round"/>
-							</svg>
-						</div>
-					</a>
-					<a class="projectItem" href="./share.html">
-						<div class="projectItemLeft">
-							<h1>My Share</h1>
-							<p>Anime, Videos &amp; Music</p>
-						</div>
-						<div class="projectItemRight">
-							<svg class="notes-icon" viewBox="0 0 48 48" aria-hidden="true">
-								<rect x="6" y="7" width="36" height="34" rx="9" fill="#d9f4fb" stroke="#34596a" stroke-width="2.5"/>
-								<path d="m20 17 12 7-12 7V17Z" fill="#318eb1"/>
-							</svg>
-						</div>
-					</a>
-				</div>
-			</main>
-		</div>
-	</div>
-	<footer>
-		🌸 Pan Feng © 2026 |
-		<a href="https://github.com/ZYYO666/homepage" target="_blank" rel="noopener noreferrer">
-			<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-				<path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9 23.5 23.2 38.1 55.4 38.1 91v112.5c0.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z" p-id="2488"></path>
-			</svg>
-			Source by ZYYO666 🌸
-		</a>
-	</footer>
-	<script src="./static/js/script.js" defer></script>
+                    <div class="proof-focus" aria-label="Research areas">
+                        <article class="proof-focus-item">
+                            <small>R_01 / DESIGN</small>
+                            <h2>Security Protocol<br>Design</h2>
+                            <p>Threat models · Constructions</p>
+                        </article>
+                        <article class="proof-focus-item">
+                            <small>R_02 / ANALYZE</small>
+                            <h2>Formal Security<br>Analysis</h2>
+                            <p>Games · Reductions · Simulation</p>
+                        </article>
+                        <article class="proof-focus-item">
+                            <small>R_03 / DEPLOY</small>
+                            <h2>Privacy-Preserving<br>Systems</h2>
+                            <p>Secure computation · Federated learning</p>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="proof-engine" aria-label="Cryptographic protocol visualization">
+                    <div class="proof-ring" aria-hidden="true"></div>
+                    <span class="proof-node node-statement">statement / x</span>
+                    <span class="proof-node node-adversary">adversary / A</span>
+                    <span class="proof-node node-simulator">simulator / S</span>
+                    <span class="proof-node node-witness">witness / w</span>
+
+                    <div class="proof-avatar">
+                        <img src="./static/img/logo.jpg" alt="Pan Feng">
+                    </div>
+
+                    <div class="proof-engine-formula">
+                        <small>Generic security target</small>
+                        <span aria-label="The security advantage of adversary A is at most negligible in lambda">
+                            Adv<sup>sec</sup><sub>A</sub>(&lambda;) &le; negl(&lambda;)
+                        </span>
+                    </div>
+                </aside>
+            </section>
+        </main>
+    </div>
+
+    <section class="formula-ticker" aria-label="Generic cryptographic security notation">
+        <p class="sr-only">The moving formulas illustrate generic notation for completeness, soundness, simulation privacy, and context binding. They are not claims about a specific protocol.</p>
+        <div class="formula-ticker-track" aria-hidden="true">
+            <span><b>COMPLETENESS</b> (x,w) &isin; R &Rightarrow; Pr[Verify(pp,x,Prove(pp,x,w))=1] &ge; 1&minus;negl(&lambda;)</span>
+            <span><i>SOUNDNESS</i> x &notin; L &Rightarrow; Pr[Verify(pp,x,A(pp,x))=1] &le; negl(&lambda;)</span>
+            <span><b>SIMULATION PRIVACY</b> View<sub>real</sub> &approx;<sub>c</sub> View<sub>ideal</sub></span>
+            <span><i>CONTEXT BINDING</i> ctx := H(Encode(sid,id,stmt))</span>
+            <span><b>COMPLETENESS</b> (x,w) &isin; R &Rightarrow; Pr[Verify(pp,x,Prove(pp,x,w))=1] &ge; 1&minus;negl(&lambda;)</span>
+            <span><i>SOUNDNESS</i> x &notin; L &Rightarrow; Pr[Verify(pp,x,A(pp,x))=1] &le; negl(&lambda;)</span>
+            <span><b>SIMULATION PRIVACY</b> View<sub>real</sub> &approx;<sub>c</sub> View<sub>ideal</sub></span>
+            <span><i>CONTEXT BINDING</i> ctx := H(Encode(sid,id,stmt))</span>
+        </div>
+    </section>
+
+    <div class="proof-shell">
+        <section class="proof-directory" aria-labelledby="directory-title">
+            <div class="proof-directory-head">
+                <h2 id="directory-title">Public access points</h2>
+                <p>Access level / Public · 04 routes</p>
+            </div>
+
+            <div class="proof-links">
+                <a class="proof-link" href="https://scholar.fp1022.dpdns.org/" target="_blank" rel="noopener noreferrer">
+                    <small>01 / RESEARCH PROFILE</small>
+                    <span class="proof-link-arrow" aria-hidden="true">↗</span>
+                    <h3>Academic Homepage</h3>
+                    <p>Research profile &amp; publications</p>
+                </a>
+                <a class="proof-link" href="https://scholar.google.com/citations?hl=en&amp;user=NQzVlS8AAAAJ" target="_blank" rel="noopener noreferrer">
+                    <small>02 / PUBLICATIONS</small>
+                    <span class="proof-link-arrow" aria-hidden="true">↗</span>
+                    <h3>Google Scholar</h3>
+                    <p>Publications &amp; citations</p>
+                </a>
+                <a class="proof-link" href="https://blog.fp1022.dpdns.org/" target="_blank" rel="noopener noreferrer">
+                    <small>03 / RESEARCH LOG</small>
+                    <span class="proof-link-arrow" aria-hidden="true">↗</span>
+                    <h3>My Study Notes</h3>
+                    <p>Learning notes &amp; reflections</p>
+                </a>
+                <a class="proof-link" href="./share.html">
+                    <small>04 / PERSONAL ARCHIVE</small>
+                    <span class="proof-link-arrow" aria-hidden="true">→</span>
+                    <h3>My Share</h3>
+                    <p>Anime, videos &amp; music</p>
+                </a>
+            </div>
+        </section>
+
+        <footer class="proof-footer">
+            <div>
+                <strong>Pan Feng © 2026</strong>
+                <span>Southeast University · Nanjing, China</span>
+            </div>
+            <div>
+                <a href="mailto:fp_1022@seu.edu.cn">fp_1022@seu.edu.cn</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./static/js/script.js" defer></script>
 </body>
 </html>
