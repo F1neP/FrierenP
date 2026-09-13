@@ -1010,8 +1010,8 @@ html[data-home-theme="white"] .share-page {
     }
 
     .home-theme-switch button {
-        min-width: 48px;
-        padding-inline: 7px;
+        min-width: 58px;
+        padding-inline: 8px;
     }
 
     .share-hero {
